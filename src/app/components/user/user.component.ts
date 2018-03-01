@@ -1,6 +1,6 @@
-///<reference path="../../../node_modules/@angular/core/src/metadata/directives.d.ts"/>
+///<reference path="../../../../node_modules/@angular/core/src/metadata/directives.d.ts"/>
 import { Component, Input } from '@angular/core';
-import { User } from './../models/User' ;
+import { User } from '../../models/User' ;
 
 @Component({
   selector: 'app-user',
