@@ -16,6 +16,7 @@ export class UserComponent implements OnInit{
   constructor() {
     this.user = {
       firstName: 'George',
+      middleInit: 'W',
       lastName: 'Okello',
       age: 27,
       address: {

@@ -15,6 +15,7 @@ export class UsersComponent implements OnInit {
     this.users = [
       {
         firstName: 'George',
+        middleInit: 'W',
         lastName: 'Okello',
         age: 27,
         address: {
@@ -26,6 +27,7 @@ export class UsersComponent implements OnInit {
       },
       {
         firstName: 'Arthur',
+        middleInit: 'T',
         lastName: 'Okello',
         age: 24,
         address: {
@@ -37,6 +39,7 @@ export class UsersComponent implements OnInit {
       },
       {
         firstName: 'Nigel',
+        middleInit: 'C',
         lastName: 'Okello',
         age: 19,
         address: {
@@ -48,6 +51,7 @@ export class UsersComponent implements OnInit {
       },
       {
         firstName: 'Chris',
+        middleInit: 'A',
         lastName: 'Okello',
         age: 24,
         address: {

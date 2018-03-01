@@ -1,5 +1,6 @@
 export interface User {
   firstName: string,
+  middleInit: string,
   lastName: string,
   age: number,
   address: {
