@@ -14,114 +14,64 @@ export class UsersComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.users = [
-        {
-          firstName: 'George',
-          middleInit: 'W',
-          lastName: 'Okello',
-          age: 27,
-          address: {
-            street: '2020 McCausland Ave',
-            city: 'St. Louis',
-            state: 'MO',
-            zip: 63143
-          }
-        },
-        {
-          firstName: 'Arthur',
-          middleInit: 'T',
-          lastName: 'Okello',
-          age: 24,
-          address: {
-            street: '1326 McKelvey Road',
-            city: 'Maryland Heights',
-            state: 'MO',
-            zip: 63043
-          }
-        },
-        {
-          firstName: 'Nigel',
-          middleInit: 'C',
-          lastName: 'Okello',
-          age: 19,
-          address: {
-            street: '1326 McKelvey Road',
-            city: 'Maryland Heights',
-            state: 'MO',
-            zip: 63043
-          }
-        },
-        {
-          firstName: 'Chris',
-          middleInit: 'A',
-          lastName: 'Okello',
-          age: 24,
-          address: {
-            street: '1326 McKelvey Road',
-            city: 'Maryland Heights',
-            state: 'MO',
-            zip: 63043
-          }
+
+    this.users = [
+      {
+        firstName: 'George',
+        middleInit: 'W',
+        lastName: 'Okello',
+        age: 27,
+        address: {
+          street: '2020 McCausland Ave',
+          city: 'St. Louis',
+          state: 'MO',
+          zip: 63143
         }
-      ];
+      },
+      {
+        firstName: 'Arthur',
+        middleInit: 'T',
+        lastName: 'Okello',
+        age: 24,
+        address: {
+          street: '1326 McKelvey Road',
+          city: 'Maryland Heights',
+          state: 'MO',
+          zip: 63043
+        }
+      },
+      {
+        firstName: 'Nigel',
+        middleInit: 'C',
+        lastName: 'Okello',
+        age: 19,
+        address: {
+          street: '1326 McKelvey Road',
+          city: 'Maryland Heights',
+          state: 'MO',
+          zip: 63043
+        }
+      },
+      {
+        firstName: 'Chris',
+        middleInit: 'A',
+        lastName: 'Okello',
+        age: 24,
+        address: {
+          street: '1326 McKelvey Road',
+          city: 'Maryland Heights',
+          state: 'MO',
+          zip: 63043
+        }
+      },
+      {
+        firstName: 'Benta',
+        middleInit: 'A',
+        lastName: 'Okello'
+      }
+    ];
 
-      this.loaded = true;
-    }, 2000);
-
-
-    // this.users = [
-    //   {
-    //     firstName: 'George',
-    //     middleInit: 'W',
-    //     lastName: 'Okello',
-    //     age: 27,
-    //     address: {
-    //       street: '2020 McCausland Ave',
-    //       city: 'St. Louis',
-    //       state: 'MO',
-    //       zip: 63143
-    //     }
-    //   },
-    //   {
-    //     firstName: 'Arthur',
-    //     middleInit: 'T',
-    //     lastName: 'Okello',
-    //     age: 24,
-    //     address: {
-    //       street: '1326 McKelvey Road',
-    //       city: 'Maryland Heights',
-    //       state: 'MO',
-    //       zip: 63043
-    //     }
-    //   },
-    //   {
-    //     firstName: 'Nigel',
-    //     middleInit: 'C',
-    //     lastName: 'Okello',
-    //     age: 19,
-    //     address: {
-    //       street: '1326 McKelvey Road',
-    //       city: 'Maryland Heights',
-    //       state: 'MO',
-    //       zip: 63043
-    //     }
-    //   },
-    //   {
-    //     firstName: 'Chris',
-    //     middleInit: 'A',
-    //     lastName: 'Okello',
-    //     age: 24,
-    //     address: {
-    //       street: '1326 McKelvey Road',
-    //       city: 'Maryland Heights',
-    //       state: 'MO',
-    //       zip: 63043
-    //     }
-    //   }
-    // ];
-
-    this.showExtended = false;
+    this.loaded = true;
 
     // this.addUser({
     //   firstName: 'Kenneth',
