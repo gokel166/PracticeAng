@@ -8,6 +8,7 @@ export interface User {
     city: string,
     state: string,
     zip: number
-  };
+  },
+  image?: string;
 }
 

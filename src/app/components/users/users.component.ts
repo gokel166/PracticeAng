@@ -10,6 +10,7 @@ export class UsersComponent implements OnInit {
   users: User[];
   showExtended = true;
   loaded = false;
+  enableAdd = true;
 
   constructor() { }
 
@@ -26,7 +27,8 @@ export class UsersComponent implements OnInit {
           city: 'St. Louis',
           state: 'MO',
           zip: 63143
-        }
+        },
+        image: 'http://lorempixel.com/600/600/people/2'
       },
       {
         firstName: 'Arthur',
@@ -38,7 +40,8 @@ export class UsersComponent implements OnInit {
           city: 'Maryland Heights',
           state: 'MO',
           zip: 63043
-        }
+        },
+        image: 'http://lorempixel.com/600/600/people/3'
       },
       {
         firstName: 'Nigel',
@@ -50,7 +53,8 @@ export class UsersComponent implements OnInit {
           city: 'Maryland Heights',
           state: 'MO',
           zip: 63043
-        }
+        },
+        image: 'http://lorempixel.com/600/600/people/1'
       },
       {
         firstName: 'Chris',
@@ -62,12 +66,14 @@ export class UsersComponent implements OnInit {
           city: 'Maryland Heights',
           state: 'MO',
           zip: 63043
-        }
+        },
+        image: 'http://lorempixel.com/600/600/people/4'
       },
       {
         firstName: 'Benta',
         middleInit: 'A',
-        lastName: 'Okello'
+        lastName: 'Okello',
+        image: 'http://lorempixel.com/600/600/people/5'
       }
     ];
 
