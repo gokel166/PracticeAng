@@ -1,5 +1,5 @@
 ///<reference path="../../../../node_modules/@angular/core/src/metadata/directives.d.ts"/>
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { User } from '../../models/User' ;
 
 @Component({
@@ -8,7 +8,7 @@ import { User } from '../../models/User' ;
   styleUrls: ['./user.component.css']
 })
 
-export class UserComponent {
+export class UserComponent implements OnInit{
 
   // take inputs from "User" interface
   @Input('user') user: User;
@@ -25,6 +25,10 @@ export class UserComponent {
         zip: 63043
       }
     };
+  }
+
+  ngOnInit() {
+    console.log('Initializing..');
   }
 
 }
