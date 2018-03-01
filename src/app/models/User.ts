@@ -10,6 +10,8 @@ export interface User {
     zip: number
   },
   image?: string,
-  isActive?: boolean;
+  isActive?: boolean,
+  balance?: number,
+  registered?: any;
 }
 

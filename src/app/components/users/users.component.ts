@@ -12,6 +12,7 @@ export class UsersComponent implements OnInit {
   loaded = false;
   enableAdd = true;
   currentClasses = {};
+  currentStyles = {};
 
   constructor() { }
 
@@ -30,7 +31,9 @@ export class UsersComponent implements OnInit {
           zip: 63143
         },
         image: 'http://lorempixel.com/600/600/people/2',
-        isActive: false
+        isActive: false,
+        balance: 120,
+        registered: new Date('2/23/2018 1:54:23')
       },
       {
         firstName: 'Arthur',
@@ -41,10 +44,12 @@ export class UsersComponent implements OnInit {
           street: '1326 McKelvey Road',
           city: 'Maryland Heights',
           state: 'MO',
-          zip: 63043
+          zip: 63043,
         },
         image: 'http://lorempixel.com/600/600/people/3',
-        isActive: true
+        isActive: true,
+        balance: 430,
+        registered: new Date('12/13/2016 05:25:00')
       },
       {
         firstName: 'Nigel',
@@ -55,10 +60,12 @@ export class UsersComponent implements OnInit {
           street: '1326 McKelvey Road',
           city: 'Maryland Heights',
           state: 'MO',
-          zip: 63043
+          zip: 63043,
         },
         image: 'http://lorempixel.com/600/600/people/1',
-        isActive: false
+        isActive: false,
+        balance: 213,
+        registered: new Date('10/25/2017 12:07:20')
       },
       {
         firstName: 'Chris',
@@ -98,6 +105,7 @@ export class UsersComponent implements OnInit {
     //   }
     // });
     this.setCurrentClasses();
+    this.setCurrentStyles();
   }
 
   addUser(user: User) {
@@ -109,6 +117,12 @@ export class UsersComponent implements OnInit {
       'btn-success': this.enableAdd,
       'big-text': this.showExtended
     };
+  }
+
+  setCurrentStyles() {
+    this.currentStyles = {
+      'padding-top': this.showExtended ? '0' : '40px'
+    }
   }
 
 }
