@@ -7,10 +7,22 @@ import { User } from '../../models/User';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  user: User = {
+    firstName: '',
+    middleInit: '',
+    lastName: '',
+    age: null,
+    address: {
+      street: '',
+      city: '',
+      state: '',
+      zip: null
+    }
+  };
   users: User[];
   showExtended = true;
   loaded = false;
-  enableAdd = true;
+  enableAdd = false;
   showUserForm: boolean = false;
 
   constructor() { }
@@ -110,8 +122,23 @@ export class UsersComponent implements OnInit {
     console.log('user toggled');
   }
 
-  addUser(user: User) {
-    this.users.push(user);
+  addUser() {
+    this.user.isActive = true;
+    this.user.registered = new Date();
+    this.users.unshift(this.user);
+
+    this.user = {
+      firstName: '',
+      middleInit: '',
+      lastName: '',
+      age: null,
+      address: {
+        street: '',
+        city: '',
+        state: '',
+        zip: null
+      }
+    };
   }
 
   onSubmit(e) {
