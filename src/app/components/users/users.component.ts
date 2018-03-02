@@ -11,8 +11,6 @@ export class UsersComponent implements OnInit {
   showExtended = true;
   loaded = false;
   enableAdd = true;
-  currentClasses = {};
-  currentStyles = {};
 
   constructor() { }
 
@@ -30,10 +28,9 @@ export class UsersComponent implements OnInit {
           state: 'MO',
           zip: 63143
         },
-        image: 'http://lorempixel.com/600/600/people/2',
         isActive: false,
-        balance: 120,
-        registered: new Date('2/23/2018 1:54:23')
+        registered: new Date('2/14/2013 08:26:21'),
+        hide: false
       },
       {
         firstName: 'Arthur',
@@ -46,10 +43,9 @@ export class UsersComponent implements OnInit {
           state: 'MO',
           zip: 63043,
         },
-        image: 'http://lorempixel.com/600/600/people/3',
         isActive: true,
-        balance: 430,
-        registered: new Date('12/13/2016 05:25:00')
+        registered: new Date('5/4/2012 02:11:21'),
+        hide: true
       },
       {
         firstName: 'Nigel',
@@ -62,10 +58,7 @@ export class UsersComponent implements OnInit {
           state: 'MO',
           zip: 63043,
         },
-        image: 'http://lorempixel.com/600/600/people/1',
         isActive: false,
-        balance: 213,
-        registered: new Date('10/25/2017 12:07:20')
       },
       {
         firstName: 'Chris',
@@ -78,15 +71,20 @@ export class UsersComponent implements OnInit {
           state: 'MO',
           zip: 63043
         },
-        image: 'http://lorempixel.com/600/600/people/4',
         isActive: true
       },
       {
         firstName: 'Benta',
         middleInit: 'A',
         lastName: 'Okello',
-        image: 'http://lorempixel.com/600/600/people/5',
-        isActive: false
+        age: 50,
+        address: {
+          street: '1910 Mereview Court',
+          city: 'Charlotte',
+          state: 'NC',
+          zip: 28210
+        },
+        isActive: true
       }
     ];
 
@@ -104,25 +102,15 @@ export class UsersComponent implements OnInit {
     //     zip: 63043
     //   }
     // });
-    this.setCurrentClasses();
-    this.setCurrentStyles();
+  }
+
+  toggleHide(user: User) {
+    user.hide = !user.hide;
+    console.log('user toggled');
   }
 
   addUser(user: User) {
     this.users.push(user);
-  }
-
-  setCurrentClasses() {
-    this.currentClasses = {
-      'btn-success': this.enableAdd,
-      'big-text': this.showExtended
-    };
-  }
-
-  setCurrentStyles() {
-    this.currentStyles = {
-      'padding-top': this.showExtended ? '0' : '40px'
-    }
   }
 
 }

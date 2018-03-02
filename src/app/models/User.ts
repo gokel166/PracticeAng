@@ -9,9 +9,8 @@ export interface User {
     state: string,
     zip: number
   },
-  image?: string,
   isActive?: boolean,
-  balance?: number,
-  registered?: any;
+  registered?: any,
+  hide?: boolean;
 }
 
